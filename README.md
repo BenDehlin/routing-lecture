@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+## What I did to set up
+1. run `npx create-react-app routing-lecture` and cd'd into it
+2. run `npm install react-router-dom`
+3. imported `HashRouter` into `./src/index.js` (not the same as the index.js on a server) and wrapped it around my `App` component
+4. created `./src/routes.js` to define the routes for my application
+5. imported `./src/routes.js` into `./src/App.js` to render my routes inside my application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What you need to do to fork/clone the project
+1. fork and clone my repo
+2. cd into the cloned repo
+3. run `npm install` to install our dependencies. Note that you don't need to install react-router-dom because it is already included in the dependencies because I ran npm install react-router-dom during the lecture.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## What files are important?
+1. `./src/index.js` will be where we start if you want to follow all of my notes
+2. `./src/routes.js` will be where we define our routes
+3. `./src/App.js` will be where we import and render our `./src/routes.js` file
+4. `./src/components/Header.js` Will be a component we render in `./src/App.js` above all of our other routes
+5. `./src/components/Dashboard.js` will be our "Home" route, or the route we land on if we don't specify a different url
+6. `./src/components/AboutUs.js` and `./src/components/Info.js` are 2 different routes we have that will not have any real logic in them but just render a different "page"
+7. `./src/components/Profile.js` will be our Profile page. When we route to this component we will be expected to pass an id param on the end of the url so we know what "Profile" we're supposed to be looking at.
